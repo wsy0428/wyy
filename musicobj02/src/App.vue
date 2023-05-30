@@ -1,11 +1,18 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-view/>
+    <play-controller></play-controller>
   </nav>
-  <router-view/>
 </template>
 
+<script>
+import playController from './components/PlayController.vue'
+export default{
+  components:{
+    playController
+  }
+}
+</script>
 <style lang="less">
 *{
   margin: 0;
